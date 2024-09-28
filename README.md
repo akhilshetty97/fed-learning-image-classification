@@ -1,6 +1,9 @@
 Introduction:  
 Federated Learning (FL) is a type of machine learning where the model is trained directly on multiple devices (clients) that hold local data, rather than moving the data to a central location (server). Instead of sending raw data to a central server, only the model updates which can be gradients are transmitted to a central server for aggregation. This helps in maintaining data privacy as the data stays on the local devices. This approach was first discussed in 2016, when a paper was published by Google AI.  
 
+Goal:  
+Simulation of a federated learning setup using the Flower framework, where a Convolutional Neural Network (CNN) is trained on a subset of the Federated Extended MNIST (FEMNIST) dataset. Each client holds its own local data (handwritten digit images) and trains the model locally, sharing only the model updates with the central server. The server aggregates these updates using the Federated Averaging (FedAvg) strategy to create a global model. This approach simulates a real-world federated learning environment, where data privacy is maintained as raw data remains on the clients, while the server orchestrates the overall model training process.
+
 Dataset:  
 For this project, a subset of the Federated Extended MNIST (FEMNIST) dataset has been used, which contains grayscale images of handwritten digits (0–9). The data is distributed across multiple clients in an IID (Independent and Identically Distributed) manner, with each client folder containing images of digits organized by label. Each client folder has subdirectories for each digit (0-9), and inside these are the respective images. This setup simulates a federated learning scenario where clients train models locally on their own data before contributing updates to a central server.
 
